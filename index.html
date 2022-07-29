@@ -1,0 +1,122 @@
+<!-- File for the main page of the website -->
+<!DOCTYPE html> <!-- This specifies this is an html5 doc -->
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>OverwatchLeague Observers Are Dope</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Bar (2 links + name) -->
+        <div class="nav-wrapper">
+            <!-- left column division of nav bar -->
+            <div class="left-side">
+                <div class="nav-link-wrapper active-nav-link">  <!-- class can be referenced by either name -->
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+            <!-- right column division of nav bar -->
+            <div class="right-side">
+                <div class="name-text">
+                    <div>MICHELE MASSA</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="content-items-wrapper">  <!-- for all items -->
+                
+                <!-- starting here -->
+                <div class="content-item-wrapper">  <!-- for each individual item-->
+                    <div class="content-img-background" style="background-image:url(images/possible_bg.jpg)"></div>
+                    
+                    <div class="image-text-wrapper">
+                        
+                        <div class="logo-wrapper">
+                            <img src="images/logos/uprising.png" alt=""> 
+                        </div>
+                        <div class="subtitle">
+                           The storm after the calm #UprisingVsJustice
+                        </div>
+                    </div>
+                </div>
+                <!-- up to here, we have the wrapper of divs for a single image of the 4 we want to enter -->
+
+                <div class="content-item-wrapper">  <!-- for each individual item-->
+                    <div class="content-img-background" style="background-image:url(images/possiblebg3.jpg)"></div>
+                    
+                    <div class="image-text-wrapper">
+                        
+                        <div class="logo-wrapper">
+                            <img src="images/logos/shock.png" alt=""> 
+                        </div>
+                        <div class="subtitle">
+                            The moonlight shining on the black widow #ShockTheWorld
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-item-wrapper">  <!-- for each individual item-->
+                    <div class="content-img-background" style="background-image:url(images/possiblebg.jpg)"></div>
+                    
+                    <div class="image-text-wrapper">
+                        
+                        <div class="logo-wrapper">
+                            <img src="images/logos/mayhem.png" alt=""> 
+                        </div>
+                        <div class="subtitle">
+                            Choke? HELD, Abilities? USED, Winton? ULT #MayhemVsSpitfire
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-item-wrapper">  <!-- for each individual item-->
+                    <div class="content-img-background" style="background-image:url(images/possiblebg2.jpg)"></div>
+                    
+                    <div class="image-text-wrapper">
+                        
+                        <div class="logo-wrapper">
+                            <img src="images/logos/justice.png" alt=""> 
+                        </div>
+                        <div class="subtitle">
+                            Even the most eternal of squads succumbs to a double death blossom #JusticeVsEternal #ThatBrothaReaperInThaBackIsGone
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<!-- js code starts here -->
+<script>
+    const contentItems = document.querySelectorAll('.content-item-wrapper');  // select all images
+    contentItems.forEach(contentItem => {
+        // for loop over each image (content item)
+        contentItem.addEventListener('mouseover', () => {
+            // every time you hover over one of the images, perform the following
+            // access first child node in content-item-wrapper = content-img-background, and add img-darken css
+            contentItem.childNodes[3].classList.add('img-darken'); 
+            contentItem.childNodes[3].classList.remove('img-lighten');  
+        })
+
+        contentItem.addEventListener('mouseout', () => {
+            // every time you hover out of one of the images, perform the following
+            // access first child node in content-item-wrapper = content-img-background, and add img-lighten css
+            contentItem.childNodes[3].classList.add('img-lighten');
+            contentItem.childNodes[3].classList.remove('img-darken'); 
+        })
+
+    }) 
+
+</script>
+
+</html>
